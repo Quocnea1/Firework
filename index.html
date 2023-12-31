@@ -10,7 +10,7 @@
 
         <style>
             #info {
-                background: #333;
+                /* background-image: url("https://www.google.com/url?sa=i&url=http%3A%2F%2Fnamtrieu.com.vn%2Fvi%2Fkham-pha-bau-troi-sao-noi-thien-duong-mang-ten-nhat-ban.a532&psig=AOvVaw0eOIA-NVcI7CmHOPLwLCbF&ust=1704114258243000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJj6jLneuYMDFQAAAAAdAAAAABAE"); */
                 opacity: 0.8;
                 position: absolute;
                 top: 5px;
@@ -23,6 +23,8 @@
 
             @media only screen and (max-width: 600px) {
                 body {
+                    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+                        url("/image.png");
                     background: #000;
                     /* Đảm bảo màu nền phù hợp với chế độ tối */
                     margin: 0;
@@ -52,7 +54,9 @@
 
             /* basic styles for black background and crosshair cursor */
             body {
-                background: #000;
+                background-image: url("/image.png");
+                background-repeat: no-repeat;
+                background-size: cover;
                 margin: 0;
             }
 
@@ -68,13 +72,10 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-family: 'Arial', sans-serif;
-                font-size: 20px;
-                color: #903535;
+                font-size: 15px;
+                color: #ff1900;
                 border-radius: 5px;
                 animation: bounce 1s ease infinite;
-                justify-content: center;
-                align-items: center;
-                display: flex;
                 /* Thêm animation */
             }
 
@@ -107,6 +108,7 @@
         <canvas id="canvas">Canvas không hổ trợ trình duyệt của bạn.</canvas>
         <h1>CHÚC MỪNG NĂM MỚI</h1>
         <script type="text/javascript">
+
             // when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
             // not supported in all browsers though and sometimes needs a prefix, so we need a shim
             window.requestAnimFrame = (function () {
